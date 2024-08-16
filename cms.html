@@ -80,7 +80,8 @@
             sim.data_form_add.fields.push(cms.field("no_sim", "Số Sim", "text"));
             sim.data_form_add.fields.push(cms.field("price", "Giá bán", "text"));
             sim.data_form_add.fields.push(cms.field("point", "Điểm số", "file"));
-            sim.data_form_add.fields.push(cms.field("network", "Nhà mạng", "text"));
+            sim.data_form_add.fields.push(cms.field("gift","Quà Tặng"));
+            sim.data_form_add.fields.push(cms.field("network", "Nhà mạng", "collection","network"));
             sim.data_form_add.fields.push(cms.field("order", "Thứ tự hiển thị", "text"));
             cms.add(sim);
 
