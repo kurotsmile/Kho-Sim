@@ -90,7 +90,31 @@
             network.data_form_add.fields.push(cms.field("name", "Tên nhà mạng", "text"));
             network.data_form_add.fields.push(cms.field("image", "Ảnh đại diện", "file"));
             cms.add(network);
-            
+
+            var news=new Post();
+            news.id_collection="news";
+            news.label="Tin tức";
+            news.data_form_add.fields.push(cms.field("title", "Tiêu đề"));
+            news.data_form_add.fields.push(cms.field("body", "Nội dung"));
+            cms.add(news);
+
+            var order=new Post();
+            order.id_collection="order_new";
+            order.label="Đơn đặt hàng mới";
+            order.data_form_add.fields.push(cms.field("name", "Tên người đã mua sim"));
+            order.data_form_add.fields.push(cms.field("phone", "Số điện thoại"));
+            cms.add(order);
+
+            var p_setting_contact = new Post();
+            p_setting_contact.type="setting";
+            p_setting_contact.icon='<i class="fas fa-wrench"></i>';
+            p_setting_contact.id_collection = "setting_contact";
+            p_setting_contact.label = "Cài đặt liên hệ";
+            p_setting_contact.data_form_add.fields.push(cms.field('email', "Email chính"));
+            p_setting_contact.data_form_add.fields.push(cms.field('hotline', "(Hotline) Đường dây nóng"));
+            p_setting_contact.data_form_add.fields.push(cms.field('address', "Địa chỉ"));
+            cms.add(p_setting_contact);
+
             cr.setColor("#0da4fd");
             cr_firestore.id_project = "khosimpro";
             cr_firestore.api_key = "AIzaSyAvnMCIwu9Tuno8ugbVRrkJI5c_C_5BnoM";
